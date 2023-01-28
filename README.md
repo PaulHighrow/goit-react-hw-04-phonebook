@@ -1,3 +1,3 @@
-# goit-react-hw-03-phonebook
+# goit-react-hw-04-phonebook
 
 Bl-Group-2, Sulihan Kyrylo
