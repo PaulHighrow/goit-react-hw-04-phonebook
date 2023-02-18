@@ -15,11 +15,6 @@ const INITIAL_CONTACTS = [
   { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
 ];
 
-const TITLES = {
-  form: 'Phonebook',
-  contacts: 'Contacts',
-};
-
 const getInitialContacts = () => {
   const parsedContacts = JSON.parse(localStorage.getItem('contacts'));
   if (parsedContacts) {
@@ -29,12 +24,13 @@ const getInitialContacts = () => {
   }
 };
 
+
 export const App = () => {
   const [contacts, setContacts] = useState(getInitialContacts);
   const [filter, setFilter] = useState('');
-
   useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
+    window.localStorage.setItem('contacts', JSON.stringify(contacts));
+    console.log(contacts);
   }, [contacts]);
 
   const addContact = ({ name, number }) => {
